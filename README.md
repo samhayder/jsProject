@@ -6,3 +6,4 @@
 5. Weight Converter App => https://samhayder-jsproject.netlify.com/weightconverter/
 6. Bookmarks list => https://samhayder-jsproject.netlify.com/bookmark/
 7. Weather App => https://samhayder-jsproject.netlify.com/weatherapp/
+8. Calculator Grid => https://samhayder-jsproject.netlify.com/calculatorgrid/
