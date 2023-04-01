@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clock Two</title>
+   <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+   <section class="clock_area">
+      <div class="container">
+         <div class="clock">
+            <span style="--i:1"><b>.</b></span>
+            <span style="--i:2"><b>.</b></span>
+            <span style="--i:3"><b>.</b></span>
+            <span style="--i:4"><b>.</b></span>
+            <span style="--i:5"><b>01</b></span>
+            <span style="--i:6"><b>.</b></span>
+            <span style="--i:7"><b>.</b></span>
+            <span style="--i:8"><b>.</b></span>
+            <span style="--i:9"><b>.</b></span>
+            <span style="--i:10"><b>02</b></span>
+            <span style="--i:11"><b>.</b></span>
+            <span style="--i:12"><b>.</b></span>
+            <span style="--i:13"><b>.</b></span>
+            <span style="--i:14"><b>.</b></span>
+            <span style="--i:15" class="big three"><b>03</b></span>
+            <span style="--i:16"><b>.</b></span>
+            <span style="--i:17"><b>.</b></span>
+            <span style="--i:18"><b>.</b></span>
+            <span style="--i:19"><b>.</b></span>
+            <span style="--i:20"><b>04</b></span>
+            <span style="--i:21"><b>.</b></span>
+            <span style="--i:22"><b>.</b></span>
+            <span style="--i:23"><b>.</b></span>
+            <span style="--i:24"><b>.</b></span>
+            <span style="--i:25"><b>05</b></span>
+            <span style="--i:26"><b>.</b></span>
+            <span style="--i:27"><b>.</b></span>
+            <span style="--i:28"><b>.</b></span>
+            <span style="--i:29"><b>.</b></span>
+            <span style="--i:30" class="big six"><b>06</b></span>
+            <span style="--i:31"><b>.</b></span>
+            <span style="--i:32"><b>.</b></span>
+            <span style="--i:33"><b>.</b></span>
+            <span style="--i:34"><b>.</b></span>
+            <span style="--i:35"><b>07</b></span>
+            <span style="--i:36"><b>.</b></span>
+            <span style="--i:37"><b>.</b></span>
+            <span style="--i:38"><b>.</b></span>
+            <span style="--i:39"><b>.</b></span>
+            <span style="--i:40"><b>08</b></span>
+            <span style="--i:41"><b>.</b></span>
+            <span style="--i:42"><b>.</b></span>
+            <span style="--i:43"><b>.</b></span>
+            <span style="--i:44"><b>.</b></span>
+            <span style="--i:45" class="big nine"><b>09</b></span>
+            <span style="--i:46"><b>.</b></span>
+            <span style="--i:47"><b>.</b></span>
+            <span style="--i:48"><b>.</b></span>
+            <span style="--i:49"><b>.</b></span>
+            <span style="--i:50"><b>10</b></span>
+            <span style="--i:51"><b>.</b></span>
+            <span style="--i:52"><b>.</b></span>
+            <span style="--i:53"><b>.</b></span>
+            <span style="--i:54"><b>.</b></span>
+            <span style="--i:55"><b>11</b></span>
+            <span style="--i:56"><b>.</b></span>
+            <span style="--i:57"><b>.</b></span>
+            <span style="--i:58"><b>.</b></span>
+            <span style="--i:59"><b>.</b></span>
+            <span style="--i:60" class="big twelve"><b>12</b></span>
+         </div>
+         <!-- end of clock number div -->
+
+         <div class="arrows">
+            <div class="second"></div>
+            <div class="minute"></div>
+            <div class="hour"></div>
+         </div>
+      </div>
+   </section>
+
+   <script>
+      const second = document.querySelector('.second');
+      const minute = document.querySelector('.minute');
+      const hour = document.querySelector('.hour');
+
+      function updateClock () {
+         let secondDeg = new Date().getSeconds() * 6;
+         let minuteDeg = new Date().getMinutes() * 6;
+         let hourDeg = new Date().getHours() * 30;
+
+         second.style.transform = `rotate(${secondDeg}deg)`;
+         minute.style.transform = `rotate(${minuteDeg}deg)`;
+         hour.style.transform = `rotate(${hourDeg}deg)`;
+
+      }
+      setInterval(updateClock, 1000);
+
+   </script>
+   
+</body>
+</html>

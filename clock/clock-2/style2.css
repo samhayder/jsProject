@@ -1,0 +1,115 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body
+{
+   background-color: #262626;
+}
+
+.container
+{
+   position: relative;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.clock
+{
+   position: absolute;
+   width: 350px;
+   height: 350px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   border: 30px solid #FF6E61;
+   border-radius: 50%;
+   box-shadow: -2px 2px 0px #e23232,
+          inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+.clock::after 
+{
+   content: "";
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   border: 3px solid #e23232;
+   background-color: #fff;
+   border-radius: 50%;
+   z-index: 99;
+}
+
+.clock span 
+{
+   position: absolute;
+   inset: 20px;
+   text-align: center;
+   transform: rotate(calc(6deg * var(--i)));
+}
+
+.clock span b 
+{
+   display: inline-block;
+   transform: rotate(calc(-6deg * var(--i)));
+}
+
+.big
+{
+   font-size: 2rem;
+   color: #e23232;
+}
+.twelve 
+{
+   margin-top: -8px;
+}
+.three 
+{
+   margin-right: -15px;
+}
+.six 
+{
+   margin-bottom: -15px;
+}
+.nine 
+{
+   margin-left: -15px;
+}
+
+/* CSS of arrows */
+.arrows 
+{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.arrows div 
+{
+   position: absolute;
+   bottom: 50%;
+   width: 8px;
+   height: 150px;
+   background-color: black;
+   border-radius: 50%;
+   transform-origin: bottom center;
+
+}
+
+.arrows .second 
+{
+   width: 4px;
+}
+.arrows .minute 
+{
+   width: 6px;
+   height: 125px;
+}
+.arrows .hour 
+{
+   height: 100px;
+}
