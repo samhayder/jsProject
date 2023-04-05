@@ -40,10 +40,10 @@ function calender () {
    for (let i = 1; i <= lastDay; i++){
       if (i === new Date().getDate()) {
          days += `<div class="today">${i}</div>`
+      } else {
+         days += `<div>${i}</div>`
       }
-      days += `<div>${i}</div>`
    }
-
 
    daysEl.innerHTML = days;
 }

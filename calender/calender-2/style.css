@@ -1,0 +1,182 @@
+:root{
+   --primary: #e221dc;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body {
+   font-family: 'Poppins', sans-serif;
+}
+
+.calender_area {
+   min-height: 100vh;
+   color: #878895;
+   background-color: #e2e1dc;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   width: 95vw;
+   height: 80vh;
+   background-color: #373c4f;
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.calender_wrapper {
+   position: relative;
+   width: 80%;
+   height: 100%;
+   background-color: #FDFFFD;
+   border-radius: 5px;
+}
+.calender_wrapper::before,
+.calender_wrapper::after {
+   content: "";
+   position: absolute;
+   top: 1%;
+   left: 100%;
+   width: 12px;
+   height: 97%;
+   background-color: #d3d5d6d7;
+   border-radius: 0 5px 5px 0;
+}
+.calender_wrapper::before {
+   height: 94%;
+   top: 3%;
+   left: calc(100% + 12px);
+   background-color: rgb(153,153,153);
+}
+
+.left_display {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 100px;
+   padding: 10px;
+}
+
+.left_angle, 
+.right_angle {
+   cursor: pointer;
+}
+
+/* CSS of weekends */
+.weekends,
+.days {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 1rem;
+   padding: 0 20px;
+   margin-bottom: 20px;
+}
+
+.weekends div,
+.days div {
+   width: 14.28%;
+   height: 70px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.weekends div {
+   height: 50px;
+}
+
+.days div {
+   border: 1px solid #f5f5f5;
+   transition: all 1s ease;
+}
+.days div:hover:not(.pre_date, .next_date) {
+   color: #fff;
+   background-color: var(--primary);
+   font-size: 2rem;
+   box-shadow: 0 0 10px 2px  inset ;
+}
+
+.today {
+   color: #fff;
+   background-color: var(--primary);
+   font-size: 2rem;
+   box-shadow: 0 0 10px 2px  inset ;
+
+}
+.active {
+   font-size: 2rem;
+   color: var(--primary);
+   border: 1px solid var(--primary) !important;
+   border-radius: 2px;
+}
+.event {
+   position: relative;
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+.event::before {
+   content: '';
+   position: absolute;
+   left: 50%;
+   bottom: 10%;
+   width: 80%;
+   height: 5px;
+   background-color: var(--primary);
+   border-radius: 25px;
+   transform: translateX(-50%);
+}
+
+.event.active {
+   color: #fff;
+   font-size: 2rem;
+   font-weight: 400;
+   background-color: var(--primary);
+   border-radius: 2px;
+}
+.active.event::before {
+   background-color: #fff ;
+}
+
+.pre_date,
+.next_date {
+   color: #d3d5d6d7;
+}
+
+/* css of goto date */
+.goto_date {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 10px;
+}
+
+.goto_date input {
+   height: 35px;
+   outline: none;
+   border-color: var(--primary);
+   border-right-color: none !important;
+   padding: 8px;
+   border-radius: 5px;
+}
+.goto_date button {
+   height: 35px;
+   outline: none;
+   border-color: var(--primary);
+   padding: 7px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.goto_btn {
+   margin-left: -7px;
+}
