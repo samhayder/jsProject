@@ -1,0 +1,143 @@
+:root {
+   --primary: #f00;
+}
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: cursive;
+}
+
+.calender_wrapper {
+   height: 100vh;
+   background-color: #F1F8FD;
+   color: #090A19;
+   display: grid;
+   place-items: center;
+   transition: all 0.5s ease;
+}
+.calender_wrapper.dark {
+   background-color: #4C4D5B;
+   color: #fff;
+}
+.calender_wrapper.dark .container {
+   background-color: #141728;
+   box-shadow: 0 0 10px 2px rgba(0,0,0,0.7);
+}
+
+.container {
+   width: fit-content;
+   height: fit-content;
+   padding: 20px;
+   background-color: #FDFDFD;
+   border-radius: 20px;
+   box-shadow: 2px 2px 5px 5px rgb(190, 189, 189);
+}
+
+.calender_header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   font-size: 25px;
+   font-weight: 700;
+   margin-bottom: 20px;
+}
+
+.year_piker {
+   display: flex;
+   justify-content: space-between;
+   width: 40%;
+}
+.prev,
+.next {
+   cursor: pointer;
+   background-color: transparent;
+   border-radius: 10px;
+   transition: all 2s ease;
+   overflow: hidden;
+}
+.prev:hover,
+.next:hover {
+   background-color: var(--primary);
+   /* font-size: 2rem; */
+   padding: 5px;
+   color: #fff;
+}
+
+.weekends_list, 
+.days_list {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   grid-gap: 5px;
+   margin-bottom: 10px;
+}
+.weekends_list div,
+.days_list div {
+   padding: 5px;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid transparent;
+   border-radius: 5px;
+}
+
+.weekends_list {
+   color: #CACACC;
+}
+
+.days_list div {
+   cursor: pointer;
+   transition: all 1s ease-in-out;
+}
+.days_list div:hover {
+   border-color: var(--primary);
+   font-size: 1.5rem;
+}
+
+.today {
+   background-color: var(--primary);
+   font-size: 2rem;
+   color: #ffff;
+}
+
+.dark_mode_wap {
+   position: relative;
+   display: flex;
+   justify-content: end;
+   align-items: center;
+   height: 50px;
+   margin: 10px 0;
+}
+.mode_toggle {
+   position: relative;
+   width: 40px;
+   height: 15px;
+   background-color: #C5C3C6;
+   border-radius: 25px;
+   margin-left: 5px;
+}
+.change_mode {
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   background-color: #FBF8FB;
+   top: 6%;
+   left: 5%;
+   border-radius: 50%;
+   transition: all 1s ease;
+}
+.change_mode.change_mode_toggle {
+   top: 6%;
+   left: 60%;
+}
+.calender_wrapper.dark .change_mode {
+   background-color: #141728;
+}
