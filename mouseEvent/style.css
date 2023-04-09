@@ -1,0 +1,46 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+.mouse_event_area {
+   height: 100vh;
+   background-color: lightcoral;
+   font-family: cursive;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   width: 50vw;
+   display: flex;
+   justify-content: space-between;
+}
+
+.mouse_event {
+   position: relative;
+   width: 300px;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;
+   margin: 50px 0;
+}
+.mouse_event h4 {
+   position: absolute;
+   top: -20%;
+   left: 10%;
+}
+.mouse_event p {
+   font-size: 3rem;
+}
+
+@media (max-width:500px) {
+   .container {
+      flex-direction: column;
+      width: 70vw;
+   }
+}
